@@ -1,5 +1,5 @@
 import config from './package.json';
-import { plugin } from './src/Hello';
+import { plugin } from './src/youtube';
 import { Options, Func, ViewOptions } from './types/utils';
 
 declare const growiFacade : {
