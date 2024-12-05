@@ -11,10 +11,10 @@ interface GrowiNode extends Node {
 
 export const plugin: Plugin = function() {
   return (tree) => {
-    visit(tree, (node) => {
+    visit(tree, 'leafGrowiPluginDirective', (node) => {
       const n = node as unknown as GrowiNode;
       try {
-        if (n.type === 'leafGrowiPluginDirective' && n.name === 'youtube') {
+        if (n.name === 'youtube') {
           const id = Object.keys(n.attributes)[0];
           const { width, height } = n.attributes;
           n.type = 'html';
